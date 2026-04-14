@@ -1,1 +1,129 @@
+/* =====================
+   🎨 DESIGN SYSTEM
+===================== */
+:root {
+  --bg: #f5f5f5;
+  --primary: #2e7d32;
+  --text: #222;
+  --radius: 12px;
+}
 
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   BASE
+===================== */
+body {
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =====================
+   LAYOUT
+===================== */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* =====================
+   MENU
+===================== */
+.menu {
+  display: none;
+}
+
+.menu.show {
+  display: block;
+}
+
+/* =====================
+   GRID (EDITÁVEL)
+   👉 MUDE AQUI
+===================== */
+.grid {
+  display: grid;
+  gap: 1rem;
+
+  /* 👇 ALTERE COLUNAS AQUI */
+  grid-template-columns: 1fr;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+/* =====================
+   CARROSSEL
+===================== */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel img {
+  width: 300px;
+  border-radius: var(--radius);
+}
+
+/* =====================
+   ACCORDION
+===================== */
+.accordion-content {
+  display: none;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+/* =====================
+   ACESSIBILIDADE
+===================== */
+.hidden {
+  display: none;
+}
+
+.high-contrast {
+  background: black;
+  color: white;
+}
+
+/* =====================
+   ANIMAÇÃO (REVEAL)
+===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
