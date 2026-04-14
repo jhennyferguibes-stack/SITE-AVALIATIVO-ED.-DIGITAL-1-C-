@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agro Sustentável</title>
+  <meta name="description" content="Landing page sobre agro sustentável e tecnologia no campo." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <h1>Agro Sustentável</h1>
+
+      <nav aria-label="Navegação principal">
+        <button id="menu-btn" aria-expanded="false">☰</button>
+        <ul id="menu" class="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cards">Soluções</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BOTÃO ACESSIBILIDADE -->
+  <button id="accessibility-btn">A+</button>
+
+  <div id="accessibility-menu" class="hidden">
+    <button onclick="increaseFont()">Aumentar</button>
+    <button onclick="decreaseFont()">Diminuir</button>
+    <button onclick="toggleContrast()">Contraste</button>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero reveal">
+      <h2>Produção e Sustentabilidade</h2>
+      <p>O futuro do agro depende do equilíbrio com o meio ambiente.</p>
+    </section>
+
+    <!-- CARDS DINÂMICOS -->
+    <section id="cards" class="section reveal">
+      <h2>Soluções</h2>
+      <div id="cards-container" class="grid"></div>
+    </section>
+
+    <!-- CARROSSEL -->
+    <section id="galeria" class="section reveal">
+      <h2>Galeria</h2>
+
+      <div class="carousel">
+        <button onclick="changeSlide(-1)">◀</button>
+
+        <img id="carousel-img" src="" alt="" />
+
+        <button onclick="changeSlide(1)">▶</button>
+      </div>
+
+      <p id="carousel-text"></p>
+    </section>
+
+    <!-- ACORDEÃO -->
+    <section class="section reveal">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="accordion">
+        <button class="accordion-btn">O que é agro sustentável?</button>
+        <div class="accordion-content">É a produção com respeito ao meio ambiente.</div>
+
+        <button class="accordion-btn">Por que é importante?</button>
+        <div class="accordion-content">Garante recursos para o futuro.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Agro Sustentável</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
